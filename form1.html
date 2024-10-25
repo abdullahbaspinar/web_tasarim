@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Üyelik Formu</title>
+</head>
+<body>
+    <h1>Üyelik Formu</h1>
+    <form action="submit_form.php" method="post">
+        <label for="name">Adınız:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="password">Şifre:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <label for="birthdate">Doğum Tarihi:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+
+        <label>Cinsiyet:</label><br>
+        <input type="radio" id="male" name="gender" value="Erkek">
+        <label for="male">Erkek</label><br>
+        <input type="radio" id="female" name="gender" value="Kadın">
+        <label for="female">Kadın</label><br><br>
+
+        <label for="city">Şehir:</label><br>
+        <select id="city" name="city">
+            <option value="istanbul">İstanbul</option>
+            <option value="ankara">Ankara</option>
+            <option value="izmir">İzmir</option>
+        </select><br><br>
+
+        <label>Hobileriniz:</label><br>
+        <input type="checkbox" id="hobby1" name="hobbies" value="Spor">
+        <label for="hobby1">Spor</label><br>
+        <input type="checkbox" id="hobby2" name="hobbies" value="Kitap">
+        <label for="hobby2">Kitap Okuma</label><br>
+        <input type="checkbox" id="hobby3" name="hobbies" value="Yemek">
+        <label for="hobby3">Yemek Yapma</label><br><br>
+
+        <input type="submit" value="Üye Ol">
+    </form>
+</body>
+</html>
