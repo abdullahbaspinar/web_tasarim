@@ -3,26 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Üyelik Formu</title>
-    <style> body {
-        display: flex;
-        justify-content: center;  /* Yatayda ortalamak için */
-        align-items: center;      /* Dikeyde ortalamak için */
-        height: 100vh;            /* Sayfanın tamamını kapsaması için */
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-    form {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }</style>
+    <title>Kullanıcı İşlemleri</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        form {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: none;
+            width: 300px;
+        }
+        form.active {
+            display: block;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        h2 {
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    
-    <h1>Üyelik Formu</h1>
-    <form action="submit_form.php" method="post">
+
+    <!-- Üyelik Formu -->
+    <form id="registerForm" class="active" action="" method="post">
+        <h2>Üyelik Formu</h2>
         <label for="name">Adınız:</label><br>
         <input type="text" id="name" name="name" required><br><br>
 
@@ -57,6 +78,53 @@
         <label for="hobby3">Yemek Yapma</label><br><br>
 
         <input type="submit" value="Üye Ol">
+
+        <div class="button-container">
+            <button type="button" onclick="showForm('loginForm')">Kullanıcı Girişi</button>
+            <button type="button" onclick="showForm('forgotPasswordForm')">Şifremi Unuttum</button>
+        </div>
     </form>
+
+    <!-- Giriş Formu -->
+    <form id="loginForm" action="" method="post">
+        <h2>Kullanıcı Girişi</h2>
+        <label for="loginEmail">Email:</label><br>
+        <input type="email" id="loginEmail" name="loginEmail" required><br><br>
+
+        <label for="loginPassword">Şifre:</label><br>
+        <input type="password" id="loginPassword" name="loginPassword" required><br><br>
+
+        <input type="submit" value="Giriş Yap">
+
+        <div class="button-container">
+            <button type="button" onclick="showForm('registerForm')">Yeni Üyelik</button>
+            <button type="button" onclick="showForm('forgotPasswordForm')">Şifremi Unuttum</button>
+        </div>
+    </form>
+
+    <!-- Şifremi Unuttum Formu -->
+    <form id="forgotPasswordForm" action="" method="post">
+        <h2>Şifremi Unuttum</h2>
+        <label for="resetEmail">Email:</label><br>
+        <input type="email" id="resetEmail" name="resetEmail" required><br><br>
+
+        <input type="submit" value="Şifreyi Sıfırla">
+
+        <div class="button-container">
+            <button type="button" onclick="showForm('registerForm')">Yeni Üyelik</button>
+            <button type="button" onclick="showForm('loginForm')">Kullanıcı Girişi</button>
+        </div>
+    </form>
+
+    <script>
+        function showForm(formId) {
+            // Tüm formları gizle
+            document.querySelectorAll('form').forEach(form => form.classList.remove('active'));
+            
+            // Seçilen formu göster
+            document.getElementById(formId).classList.add('active');
+        }
+    </script>
+
 </body>
 </html>
