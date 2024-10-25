@@ -4,8 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Üyelik Formu</title>
+    <style> body {
+        display: flex;
+        justify-content: center;  /* Yatayda ortalamak için */
+        align-items: center;      /* Dikeyde ortalamak için */
+        height: 100vh;            /* Sayfanın tamamını kapsaması için */
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    form {
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }</style>
 </head>
 <body>
+    
     <h1>Üyelik Formu</h1>
     <form action="submit_form.php" method="post">
         <label for="name">Adınız:</label><br>
