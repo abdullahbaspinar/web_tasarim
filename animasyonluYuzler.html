@@ -16,8 +16,8 @@
 
   
   .animated-div {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
     position: relative;
     display: flex;
@@ -26,9 +26,9 @@
   }
 
   .goz {
-    width: 10px;
+    width: 17px;
     height: 14px;
-    background-color: black;
+    background-color: yellow;
     border-radius: 50%;
     position: absolute;
     top: 30%;
@@ -43,57 +43,17 @@
   }
 
   
-  .gulen.agiz {
-    width: 50px;
-    height: 20px;
-    background-color: black;
-    border-radius: 0 0 20px 20px;
-    position: absolute;
-    top: 55%;
-  }
-
-  
-  .duz.agiz {
+  .agiz {
     width: 30px;
     height: 5px;
-    background-color: black;
+    background-color: yellow;
     position: absolute;
-    top: 55%;
-  }
-
-  
-  .uzgun.agiz {
-    width: 40px;
-    height: 15px;
-    background-color: black;
-    border-radius: 20px 20px 0 0;
-    position: absolute;
-    top: 60%;
-  }
-
-  
-  .saskin.agiz {
-    width: 20px;
-    height: 20px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 55%;
-  }
-
-  
-  .dahasaskin.agiz {
-    width: 30px;
-    height: 30px;
-    background-color: black;
-    border-radius: 50%;
-    position: absolute;
-    top: 50%;
+    top: 65%;
   }
 
   
   .up-down {
-    background-color: purple;
+    background-color: navy;
     animation: upDown 2s ease-in-out infinite;
   }
 
@@ -104,18 +64,18 @@
 
   
   .scale-color {
-    background-color: red;
+    background-color: navy;
     animation: scaleColor 3s ease-in-out infinite;
   }
 
   @keyframes scaleColor {
-    0%, 100% { transform: scale(1); background-color: red; }
-    50% { transform: scale(1.2); background-color: orange; }
+    0%, 100% { transform: scale(1); background-color: navy; }
+    50% { transform: scale(1.2); background-color: lime; }
   }
 
 
   .fade-in-out {
-    background-color: pink;
+    background-color: navy;
     animation: fadeInOut 4s ease-in-out infinite;
   }
 
@@ -126,7 +86,7 @@
 
   
   .left-right {
-    background-color: blue;
+    background-color: navy;
     animation: leftRight 2s ease-in-out infinite;
   }
 
@@ -137,7 +97,7 @@
 
   
   .rotate {
-    background-color: green;
+    background-color: navy;
     animation: rotate 2s linear infinite;
   }
 
@@ -149,39 +109,36 @@
 </style>
 </head>
 <body>
-    <div style="position: absolute; top: 250px; left: 750px;">
-        <strong>Hocam bunu çok beğenmiştiniz :)</strong>
-      </div>
-
+    
 <div class="container">
   <div class="animated-div up-down">
     <div class="goz left"></div>
     <div class="goz right"></div>
-    <div class="gulen agiz"></div>
+    <div class="agiz"></div>
   </div>
   
   <div class="animated-div scale-color">
     <div class="goz left"></div>
     <div class="goz right"></div>
-    <div class="duz agiz"></div>
+    <div class="agiz"></div>
   </div>
   
   <div class="animated-div fade-in-out">
     <div class="goz left"></div>
     <div class="goz right"></div>
-    <div class="uzgun agiz"></div>
+    <div class="agiz"></div>
   </div>
   
   <div class="animated-div left-right">
     <div class="goz left"></div>
     <div class="goz right"></div>
-    <div class="saskin agiz"></div>
+    <div class="agiz"></div>
   </div>
   
   <div class="animated-div rotate">
     <div class="goz left"></div>
     <div class="goz right"></div>
-    <div class="dahasaskin agiz"></div>
+    <div class="agiz"></div>
   </div>
 </div>
 
