@@ -7,9 +7,9 @@
     <style>
         body {
             display: flex;
-            justify-content: center;  /* Yatayda ortalamak için */
-            align-items: center;      /* Dikeyde ortalamak için */
-            height: 100vh;            /* Sayfanın tamamını kapsaması için */
+            justify-content: center;  
+            align-items: center;      
+            height: 100vh;            
             margin: 0;
         }
         form {
@@ -28,25 +28,21 @@
     <form action="" method="post">
         <h1>Web Programcılığı Testi</h1>
 
-        <!-- Soru 1: Text Input -->
         <label for="q1">HTML'in açılımı nedir?</label><br>
         <input type="text" id="q1" name="q1" required><br><br>
 
-        <!-- Soru 2: Radio Buttons -->
         <label for="q2">CSS ne için kullanılır?</label><br>
         <input type="radio" id="design" name="q2" value="Tasarım" required>
         <label for="design">Tasarım</label><br>
         <input type="radio" id="database" name="q2" value="Veritabanı">
         <label for="database">Veritabanı</label><br><br>
 
-        <!-- Soru 3: Dropdown -->
         <label for="q3">HTML hangi dil kategorisine girer?</label><br>
         <select id="q3" name="q3" required>
             <option value="işaretleme">İşaretleme Dili</option>
             <option value="programlama">Programlama Dili</option>
         </select><br><br>
 
-        <!-- Soru 4: Checkbox -->
         <label>JavaScript hangi amaçlar için kullanılabilir?</label><br>
         <input type="checkbox" id="webdev" name="q4[]" value="Web Geliştirme">
         <label for="webdev">Web Geliştirme</label><br>
@@ -55,7 +51,6 @@
         <input type="checkbox" id="game" name="q4[]" value="Oyun Geliştirme">
         <label for="game">Oyun Geliştirme</label><br><br>
 
-        <!-- Soru 5: Text Area -->
         <label for="q5">Bir web sitesi geliştirmeye nereden başlarsınız?</label><br>
         <textarea id="q5" name="q5" rows="4" cols="50" required></textarea><br><br>
 
