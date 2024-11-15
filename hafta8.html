@@ -68,7 +68,7 @@
 <h1>Rastgele Arka Plan ve Resim Göster/Gizle</h1>
 
 <div class="image-container">
-    <img id="image1" src="/assets/images/caddy.png" class="hidden" alt="Caddy">
+    <img id="image1" src="assets/images/caddy.png" class="hidden" alt="Caddy">
     <img id="image2" src="assets/images/rs6.png" class="hidden" alt="RS6">
     <img id="image3" src="assets/images/gt63.png" class="hidden" alt="GT63">
 </div>
@@ -88,7 +88,8 @@
 
     window.onload = function() {
         changeBackground();
-        showRandomImage();
+        // Başlangıçta caddy resmini göstermek için:
+        document.getElementById('image1').classList.remove('hidden');
     };
 
     function changeBackground() {
