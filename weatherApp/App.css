@@ -1,0 +1,21 @@
+.app-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: background-color 0.5s;
+  }
+  
+  .default {
+    background-color: #87ceeb; /* Gökyüzü rengi */
+  }
+  
+  .rain {
+    background-color: #708090; /* Yağmurlu gri */
+  }
+  
+  .clear {
+    background-color: #ffcc00; /* Güneşli sarı */
+  }
+  
