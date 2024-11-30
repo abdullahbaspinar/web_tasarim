@@ -68,28 +68,36 @@
 <h1>Rastgele Arka Plan ve Resim Göster/Gizle</h1>
 
 <div class="image-container">
-    <img id="image1" src="assets/images/caddy.png" class="hidden" alt="Caddy">
-    <img id="image2" src="assets/images/rs6.png" class="hidden" alt="RS6">
-    <img id="image3" src="assets/images/gt63.png" class="hidden" alt="GT63">
+    <img id="image1" src="https://via.placeholder.com/200" class="hidden" alt="Random Image 1">
+    <img id="image2" src="https://via.placeholder.com/200" class="hidden" alt="Random Image 2">
+    <img id="image3" src="https://via.placeholder.com/200" class="hidden" alt="Random Image 3">
 </div>
 
 <div class="buttons-container">
-    <button onclick="toggleImage('image1')">Caddy Göster/Gizle</button>
-    <button onclick="toggleImage('image2')">RS 6 Göster/Gizle</button>
-    <button onclick="toggleImage('image3')">GT 63 Göster/Gizle</button>
+    <button onclick="toggleImage('image1')">Resim 1 Göster/Gizle</button>
+    <button onclick="toggleImage('image2')">Resim 2 Göster/Gizle</button>
+    <button onclick="toggleImage('image3')">Resim 3 Göster/Gizle</button>
 </div>
 
 <script>
     const backgroundColors = ['#f4a261', '#e76f51', '#2a9d8f', '#264653', '#e9c46a', '#a8dadc', '#457b9d', '#1d3557', '#ffb703', '#8ecae6'];
 
     const images = [
-        'caddy.png', 'rs6.png', 'gt63.png'
+        'https://picsum.photos/id/237/200/300',
+        'https://picsum.photos/id/238/200/300',
+        'https://picsum.photos/id/239/200/300',
+        'https://picsum.photos/id/240/200/300',
+        'https://picsum.photos/id/241/200/300',
+        'https://picsum.photos/id/242/200/300',
+        'https://picsum.photos/id/243/200/300',
+        'https://picsum.photos/id/244/200/300',
+        'https://picsum.photos/id/245/200/300',
+        'https://picsum.photos/id/246/200/300'
     ];
 
     window.onload = function() {
         changeBackground();
-        // Başlangıçta caddy resmini göstermek için:
-        document.getElementById('image1').classList.remove('hidden');
+        showRandomImage();
     };
 
     function changeBackground() {
@@ -98,10 +106,13 @@
     }
 
     function showRandomImage() {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        const randomImage = images[randomIndex];
-        document.getElementById('image1').src = randomImage;
+        const randomIndexes = Array.from({ length: 3 }, () => Math.floor(Math.random() * images.length));
+        document.getElementById('image1').src = images[randomIndexes[0]];
+        document.getElementById('image2').src = images[randomIndexes[1]];
+        document.getElementById('image3').src = images[randomIndexes[2]];
         document.getElementById('image1').classList.remove('hidden');
+        document.getElementById('image2').classList.remove('hidden');
+        document.getElementById('image3').classList.remove('hidden');
     }
 
     function toggleImage(imageId) {
