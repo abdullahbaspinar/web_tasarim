@@ -1,19 +1,15 @@
 <?php
-// Veritabanı bağlantısı
 $host = "localhost";
 $username = "root";
 $password = "";
 $dbname = "veritabani";
 
-// Bağlantıyı oluştur
 $conn = new mysqli($host, $username, $password, $dbname);
 
-// Bağlantı hatası kontrolü
 if ($conn->connect_error) {
     die("Bağlantı hatası: " . $conn->connect_error);
 }
 
-// Kullanıcı ekleme işlemi
 if (isset($_POST['kayit'])) {
     $ad = $_POST['ad'];
     $soyad = $_POST['soyad'];
@@ -27,7 +23,6 @@ if (isset($_POST['kayit'])) {
     }
 }
 
-// Kullanıcı arama işlemi
 if (isset($_POST['arama'])) {
     $aranan = $_POST['aranan'];
     $sql = "SELECT * FROM kisiler WHERE ad LIKE '%$aranan%' OR soyad LIKE '%$aranan%' OR email LIKE '%$aranan%'";
@@ -62,7 +57,6 @@ if (isset($_POST['arama'])) {
     </form>
 
     <?php
-    // Arama sonucu gösterimi
     if (isset($sonuc) && $sonuc->num_rows > 0) {
         echo "<h2>Arama Sonuçları:</h2>";
         echo "<table border='1'>
